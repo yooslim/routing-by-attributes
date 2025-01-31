@@ -1,0 +1,6 @@
+{
+  "name": "PHP 8 dev environment",
+  "dockerFile": "./Dockerfile",
+  "context": "..",
+  "appPort": [9000]
+}
