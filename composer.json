@@ -1,0 +1,36 @@
+{
+    "name": "yooslim/routing-by-attributes",
+    "description": "This is a Laravel package that will dynamically register routes on attributes declared alongisde your controllers.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+      {
+        "role": "Maintainer",
+        "name": "Slimani Youcef",
+        "email": "slimani.youcef.09@gmail.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "YOoSlim\\RoutingByAttributes\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "YOoSlim\\RoutingByAttributes\\Tests\\": "tests/"
+      }
+    },
+    "require": {
+      "php": "^8.0.2",
+      "illuminate/support": "^9.0 || ^10.0 || ^11.0"
+    },
+    "require-dev": {},
+    
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+      "sort-packages": true,
+      "preferred-install": "dist",
+      "optimize-autoloader": true
+    }
+  }
