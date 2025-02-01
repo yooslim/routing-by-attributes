@@ -117,3 +117,18 @@ class MyGroupedController
     }
 }
 ```
+
+### Customize the location of your controllers
+
+By default, controllers are located in app/Http/Controllers, but if you have changed this directory for architectural reasons or maybe you have multiple locations (in modular architecture), then you can force the service provider to scan the right directories by using the setControllersDirectoriesLocation method, this method should retturn a callback function which in its turn must return an array of key-value, each key is the path that you want to include to the scan, and the value is the namespace of this path.
+
+```php
+use YOoSlim\RoutingByAttributes\Providers\RoutingByAttributesProvider;
+
+RoutingByAttributesProvider::setControllersDirectoriesLocation(function () {
+    return [
+        __DIR__ . '/vendor/ModuleA/Http/Controllers' => 'Vendor\ModuleA\Http\Controllers',
+        __DIR__ . '/vendor/ModuleB/Http/Controllers' => 'Vendor\ModuleB\Http\Controllers',
+    ];
+});
+```
